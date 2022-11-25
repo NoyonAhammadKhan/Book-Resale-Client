@@ -1,4 +1,5 @@
 import React from 'react';
+import DashboardLayout from '../../layouts/DashboardLayout/DashboardLayout';
 import Main from '../../layouts/Main/Main';
 import Blogs from '../../pages/Blogs/Blogs/Blogs';
 import Home from '../../pages/Home/Home/Home';
@@ -25,8 +26,17 @@ const routes=createBrowserRouter([
             {
                 path:'/blogs',
                 element:<Blogs></Blogs>
-            }
+            },
+
+            // {
+            //     path:'/category/:id',
+            //     element:<Cat
+            // }
         ]
+    },
+    {
+        path:'/dashboard',
+        element:<DashboardLayout></DashboardLayout>
     }
 ])
 
