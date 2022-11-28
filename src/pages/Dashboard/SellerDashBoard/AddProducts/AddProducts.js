@@ -41,10 +41,11 @@ const AddProducts = () => {
                     status:'available',
                     productCondition:data.productCondition,
                     sellerPhone:data.sellerPhone,
+                    category_name:data.category
                 }
             
 
-                fetch('https://usedbook.vercel.app/books',{
+                fetch('https://usedbook-noyonahammadkhan.vercel.app/books',{
                     method:'POST',
                     headers:{
                         'content-type':'application/json',

@@ -6,7 +6,7 @@ import ProductsCategory from './ProductsCategory';
 const ProductsCategories = () => {
     const [categories,setCategories]=useState([]);
     useEffect(()=>{
-        fetch('https://usedbook.vercel.app/categories')
+        fetch('https://usedbook-noyonahammadkhan.vercel.app/categories')
         .then(res=>res.json())
         .then(data=>setCategories(data))
     },[])

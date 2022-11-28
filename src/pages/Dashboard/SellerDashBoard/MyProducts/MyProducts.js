@@ -8,7 +8,7 @@ const MyProducts = () => {
     const { data: sellerProducts = [], refetch, isLoading } = useQuery({
         queryKey: ['sellerProducts', user?.email],
         queryFn: async () => {
-            const res = await fetch(`https://usedbook.vercel.app/sellerProducts?email=${user?.email}`);
+            const res = await fetch(`https://usedbook-noyonahammadkhan.vercel.app/sellerProducts?email=${user?.email}`);
             const data = await res.json();
             return data
         }
@@ -22,7 +22,7 @@ const MyProducts = () => {
             <div className=''>
 
                 <div className="sm:rounded-lg">
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <table className="w-full overflow-scroll text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" className="py-3 px-1">

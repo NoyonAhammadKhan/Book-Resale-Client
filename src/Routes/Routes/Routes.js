@@ -2,11 +2,13 @@ import React from 'react';
 import DashboardLayout from '../../layouts/DashboardLayout/DashboardLayout';
 import Main from '../../layouts/Main/Main';
 import Blogs from '../../pages/Blogs/Blogs/Blogs';
+import CategoryProducts from '../../pages/CategoryProducts/CategoryProducts/CategoryProducts';
 import AllBuyers from '../../pages/Dashboard/AdminDashBoard/AllBuyers/AllBuyers';
 import AllSellers from '../../pages/Dashboard/AdminDashBoard/AllSellers/AllSellers';
 import AddProducts from '../../pages/Dashboard/SellerDashBoard/AddProducts/AddProducts';
 import MyProducts from '../../pages/Dashboard/SellerDashBoard/MyProducts/MyProducts';
 import Home from '../../pages/Home/Home/Home';
+import ProductsCategories from '../../pages/Home/ProductsCategories/ProductsCategories';
 import Login from '../../pages/Login/Login';
 import SignUp from '../../pages/SignUp/SignUp';
 import SellerRoute from '../SellerRoute/SellerRoute';
@@ -32,6 +34,11 @@ const routes=createBrowserRouter([
                 path:'/blogs',
                 element:<Blogs></Blogs>
             },
+            {
+                path:'/category/:id',
+                element:<CategoryProducts></CategoryProducts>,
+                loader:({params})=>fetch(`https://usedbook-noyonahammadkhan.vercel.app/categories/${params.id}`)
+            }
 
             // {
             //     path:'/category/:id',

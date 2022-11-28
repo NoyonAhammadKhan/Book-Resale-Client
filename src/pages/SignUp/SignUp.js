@@ -42,7 +42,7 @@ const SignUp = () => {
 
     const saveUser = (name, email,role) =>{
         const user ={name, email,role};
-        fetch('https://usedbook.vercel.app/users', {
+        fetch('https://usedbook-noyonahammadkhan.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
