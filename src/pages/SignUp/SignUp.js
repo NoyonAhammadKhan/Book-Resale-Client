@@ -18,6 +18,7 @@ const SignUp = () => {
     }
 
     const handleSignUp = (data) => {
+        console.log(data.role)
         setSignUPError('');
         createUser(data.email, data.password)
             .then(result => {
@@ -29,7 +30,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        // saveUser(data.name, data.email);
+                        saveUser(data.name, data.email,data.role);
                     })
                     .catch(err => console.log(err));
             })
@@ -39,9 +40,9 @@ const SignUp = () => {
             });
     }
 
-    const saveUser = (name, email) =>{
-        const user ={name, email};
-        fetch('http://localhost:5000/users', {
+    const saveUser = (name, email,role) =>{
+        const user ={name, email,role};
+        fetch('https://usedbook.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -84,6 +85,13 @@ const SignUp = () => {
                         })} className="input input-bordered w-full max-w-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
+                    <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Continue As:</span></label>
+                    <select {...register("role")} className="input input-bordered w-full max-w-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="user">User</option>
+                        <option value="seller">Seller</option>
+                    </select>
+                     </div>
                     <input className='btn btn-accent w-full mt-4 p-2 border border-fuchsia-400' value="Sign Up" type="submit" />
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>

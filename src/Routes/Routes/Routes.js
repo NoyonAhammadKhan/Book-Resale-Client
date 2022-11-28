@@ -2,9 +2,14 @@ import React from 'react';
 import DashboardLayout from '../../layouts/DashboardLayout/DashboardLayout';
 import Main from '../../layouts/Main/Main';
 import Blogs from '../../pages/Blogs/Blogs/Blogs';
+import AllBuyers from '../../pages/Dashboard/AdminDashBoard/AllBuyers/AllBuyers';
+import AllSellers from '../../pages/Dashboard/AdminDashBoard/AllSellers/AllSellers';
+import AddProducts from '../../pages/Dashboard/SellerDashBoard/AddProducts/AddProducts';
+import MyProducts from '../../pages/Dashboard/SellerDashBoard/MyProducts/MyProducts';
 import Home from '../../pages/Home/Home/Home';
 import Login from '../../pages/Login/Login';
 import SignUp from '../../pages/SignUp/SignUp';
+import SellerRoute from '../SellerRoute/SellerRoute';
 const { createBrowserRouter } = require("react-router-dom");
 const routes=createBrowserRouter([
     {
@@ -36,7 +41,29 @@ const routes=createBrowserRouter([
     },
     {
         path:'/dashboard',
-        element:<DashboardLayout></DashboardLayout>
+        element:<DashboardLayout></DashboardLayout>,
+        children:[
+            {
+                path:'/dashboard/add-products',
+                element:<SellerRoute><AddProducts></AddProducts></SellerRoute>
+            },
+            {
+                path:'/dashboard/my-products',
+                element:<MyProducts></MyProducts>
+            },
+            {
+                path:'/dashboard',
+                element:<SellerRoute><MyProducts></MyProducts></SellerRoute>
+            },
+            {
+                path:'/dashboard/all-buyers',
+                element:<AllBuyers></AllBuyers>
+            },
+            {
+                path:'/dashboard/all-sellers',
+                element:<AllSellers></AllSellers>
+            }
+        ]
     }
 ])
 

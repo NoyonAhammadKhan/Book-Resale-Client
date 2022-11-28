@@ -5,11 +5,11 @@ const useSeller = email => {
     const [isSellerLoading, setIsSellerLoading] = useState(true);
     useEffect(() => {
         if (email) {
-            fetch(`https://doctors-portal-server-rust.vercel.app/users/admin/${email}`)
+            fetch(`https://usedbook.vercel.app/users/seller/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    setIsSeller(data.isAdmin);
+                    setIsSeller(data.isSeller);
                     setIsSellerLoading(false);
                 })
         }

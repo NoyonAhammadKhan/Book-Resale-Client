@@ -30,12 +30,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // require('dotenv').config();
 const firebaseConfig = {
-  apiKey: "AIzaSyA6jxdjPYsIhVLxIlHIWQxdhtG8cnr3xmw",
-  authDomain: "assingment-12-82a14.firebaseapp.com",
-  projectId: "assingment-12-82a14",
-  storageBucket: "assingment-12-82a14.appspot.com",
-  messagingSenderId: "130875034807",
-  appId: "1:130875034807:web:347e1fca05e857e6379132"
+  apiKey: "AIzaSyAWAGbttThDfk-yeYcOjqiwN-OS9sbReec",
+  authDomain: "book-resale-941a8.firebaseapp.com",
+  projectId: "book-resale-941a8",
+  storageBucket: "book-resale-941a8.appspot.com",
+  messagingSenderId: "51353607692",
+  appId: "1:51353607692:web:09aeca47238e3912f79829"
 
 //   # REACT_APP_messagingSenderId=902517895882
 // # REACT_APP_appId=1:902517895882:web:fa74fce65cceaa3c587a33
