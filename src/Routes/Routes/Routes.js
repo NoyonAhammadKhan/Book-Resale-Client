@@ -7,6 +7,7 @@ import AllBuyers from '../../pages/Dashboard/AdminDashBoard/AllBuyers/AllBuyers'
 import AllSellers from '../../pages/Dashboard/AdminDashBoard/AllSellers/AllSellers';
 import AddProducts from '../../pages/Dashboard/SellerDashBoard/AddProducts/AddProducts';
 import MyProducts from '../../pages/Dashboard/SellerDashBoard/MyProducts/MyProducts';
+import MyOrders from '../../pages/Dashboard/UserDashBoard/MyOrders/MyOrders';
 import Home from '../../pages/Home/Home/Home';
 import ProductsCategories from '../../pages/Home/ProductsCategories/ProductsCategories';
 import Login from '../../pages/Login/Login';
@@ -69,6 +70,10 @@ const routes=createBrowserRouter([
             {
                 path:'/dashboard/all-sellers',
                 element:<AllSellers></AllSellers>
+            },
+            {
+                path:'/dashboard/my-orders',
+                element:<MyOrders></MyOrders>
             }
         ]
     }
