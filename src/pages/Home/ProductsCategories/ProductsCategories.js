@@ -11,10 +11,13 @@ const ProductsCategories = () => {
         .then(data=>setCategories(data))
     },[])
     return (
-        <div className='grid grid-cols-3 w-9/12 mx-auto'>
+        <div className=''>
+            <h1 className='text-5xl mt-5 mb-5'>Book Categories</h1>
+            <div className='grid grid-cols-3 w-9/12 mx-auto'>
             {/* {categories.length} */}
             {categories.map(category=> <ProductsCategory key={category._id} category={category}></ProductsCategory>)     
             }
+        </div>
         </div>
     );
 };

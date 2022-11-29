@@ -28,8 +28,8 @@ const DashboardLayout = () => {
                      <ul className="space-y-2">
                          {
                              isAdmin && <>
-                                 <li className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2'><Link className='font-bold' to="/dashboard/allusers">All Sellers</Link></li>
-                                 <li className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2'><Link className='font-bold' to="/dashboard/allusers">All Buyers</Link></li>
+                                 <li className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2'><Link className='font-bold' to="/dashboard/all-sellers">All Sellers</Link></li>
+                                 <li className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2'><Link className='font-bold' to="/dashboard/all-buyers">All Buyers</Link></li>
                                  
   
                              </>

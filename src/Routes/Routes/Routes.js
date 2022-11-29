@@ -72,6 +72,10 @@ const routes=createBrowserRouter([
                 element:<AllSellers></AllSellers>
             },
             {
+                path:'/dashboard/all-sellers',
+                element:<AllSellers></AllSellers>
+            },
+            {
                 path:'/dashboard/my-orders',
                 element:<MyOrders></MyOrders>
             }

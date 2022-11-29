@@ -9,9 +9,7 @@ const ProductsCategory = ({category}) => {
         <div>
             
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <Link>
-        <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-    </Link>
+   
     <div className="p-5">
         <Link>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{category_name}</h5>
