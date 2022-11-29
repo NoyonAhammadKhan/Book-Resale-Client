@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import BookingModal from '../../CategoryProducts/BookingModal/BookingModal';
 import Blog from '../Blog/Blog';
 
 const Blogs = () => {
@@ -18,6 +19,9 @@ const Blogs = () => {
     },[])
     return (
         <div>
+            <div>
+                <BookingModal></BookingModal>
+            </div>
             <h1 className='text-6xl'>This is blog page</h1>
             <div className='mx-auto'>
             {
