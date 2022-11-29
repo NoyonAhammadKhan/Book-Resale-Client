@@ -19,6 +19,7 @@ const BookingModal = ({openModal,setOpenModal,handleModal,bookingBook}) => {
      const form =event.target;
      const meetingLocation=form.meetingLocation.value;
      const contact = form.contact.value;
+     const userEmail=user?.email;
      const bookingDetails={
       productName,
       imgUrl,
@@ -30,24 +31,27 @@ const BookingModal = ({openModal,setOpenModal,handleModal,bookingBook}) => {
       category_name,
       productLocation,sellerVerification,status,usedYear,
       productId:_id,
-      userEmail:user?.email,
+      userEmail,
       postedTime,meetingLocation,contact
      }
 
      fetch('https://usedbook-noyonahammadkhan.vercel.app/booking',{
       method:'POST',
+      
       headers:{
-        'content-type':'application/json'
+        'Content-Type':'application/json'
       },
-      body:JSON.stringify(bookingBook)
+      body:JSON.stringify(bookingDetails)
      })
      .then(res=>res.json())
      .then(data=>{
-      if(data.acknowledge){
+      console.log(data)
+      if(data.acknowledged){
+       
         toast.success('Product added successfully')
         form.reset()
       }  
-      console.log(data)
+     
     })
     // console.log(contact,meetingLocation);
    
