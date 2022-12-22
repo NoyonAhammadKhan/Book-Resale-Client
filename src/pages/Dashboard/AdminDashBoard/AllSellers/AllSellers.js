@@ -37,6 +37,9 @@ const AllSellers = () => {
         }
         })
       }
+      const handleVarify=()=>{
+
+      }
         return (
             <div>
                 <h1>All Sellers</h1>
@@ -50,6 +53,9 @@ const AllSellers = () => {
         </Table.HeadCell>
         <Table.HeadCell>
           User Email
+        </Table.HeadCell>
+        <Table.HeadCell>
+          Verification
         </Table.HeadCell>
         <Table.HeadCell>
           Action
@@ -68,7 +74,11 @@ const AllSellers = () => {
         <Table.Cell>
           {seller.email}
         </Table.Cell>
-       
+        <Table.Cell>
+        <Button onClick={()=>{handleVarify(seller._id)}} gradientMonochrome="purple">
+          Verify
+        </Button>
+        </Table.Cell>
         <Table.Cell>
         <Button onClick={()=>{handleDelete(seller._id)}} gradientMonochrome="failure">
           Delete

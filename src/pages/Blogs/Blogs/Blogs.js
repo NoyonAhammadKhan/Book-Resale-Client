@@ -16,12 +16,10 @@ const Blogs = () => {
         .catch((err)=>{
             console.log(err)
         })
-    },[])
+    },[blogs])
     return (
         <div>
-            <div>
-                <BookingModal></BookingModal>
-            </div>
+           
             <h1 className='text-6xl'>This is blog page</h1>
             <div className='mx-auto'>
             {
