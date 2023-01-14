@@ -7,7 +7,7 @@ const TopSection = () => {
                 <h3 className='text-xl text-green-500 font-bold my-3'>Bookish Hero Bookstore</h3>
                 <h2 className='text-5xl font-bold my-3'>For Every Books <br /> You Need For Reading</h2>
                 <p className='text-lg mb-3'>Here we have collection all the books which you need to enjoy.We Always apretiate to read books.It increase your imagination power.</p>
-                <button type="button" className="text-blue-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">Read More</button>
+                <button className='bg-emerald-500 px-5 py-2 rounded-md text-white font-bold my-1'>Read More</button>
             </div>
             <div>
                 <img src={TopImg} className='w-10/12' alt="" />

@@ -20,8 +20,7 @@ const ContactUs = () => {
                     </div>
                    
                     <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..." ></textarea>
-                    <button type="button" className="w-full my-5 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2 text-xl">Send Messages</button>
-
+                    <button className='bg-emerald-500 px-5 py-3 rounded-md text-white font-bold  w-full my-3'>Send Message</button>
                     </form>
                 </div>
                 <div className='my-5'>
